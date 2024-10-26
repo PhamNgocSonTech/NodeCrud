@@ -9,7 +9,7 @@ function Character(name, hp, atk, defense, speed, counterRate) {
     const damage = Math.max(this.atk - target.defense, 0);
     target.hp -= damage;
     console.log(
-      `${this.name} tấn công ${target.name}, gây ra ${damage} sát thương. ${target.name} còn lại ${target.hp} máu.`
+      `${this.name} tấn công ${target.name}, gây ra ${damage} sát thương. ${target.name} còn lại ${target.hp} máu.`,
     );
     //   	Xử lý target phản công
     if (target.isAlive() && Math.random() < target.counterRate) {
@@ -17,7 +17,7 @@ function Character(name, hp, atk, defense, speed, counterRate) {
       //  Trừ HP của kẻ tấn công
       this.hp -= counterDmg;
       console.log(
-        `${target.name} tấn công lại ${this.name}, gây ra ${counterDmg} sát thương. ${this.name} còn lại ${this.hp} máu.`
+        `${target.name} tấn công lại ${this.name}, gây ra ${counterDmg} sát thương. ${this.name} còn lại ${this.hp} máu.`,
       );
     }
   };

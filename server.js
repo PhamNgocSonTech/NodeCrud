@@ -1,5 +1,5 @@
 const express = require("express");
-const newRoute = require("./routes");
+const newRoute = require("./routes/index.js");
 require("dotenv").config();
 
 const { connectDB } = require("./db/index.js");
